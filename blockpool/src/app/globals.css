@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+
+  .blue {
+    --background: 214 100% 97%;
+    --foreground: 214 100% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 214 100% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 100% 10%;
+    --primary: 214 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 30% 95%;
+    --secondary-foreground: 214 100% 10%;
+    --muted: 214 30% 95%;
+    --muted-foreground: 214 20% 40%;
+    --accent: 214 30% 95%;
+    --accent-foreground: 214 100% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 30% 85%;
+    --input: 214 30% 85%;
+    --ring: 214 100% 50%;
+  }
+
+  .green {
+    --background: 120 60% 97%;
+    --foreground: 120 100% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 120 100% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 100% 10%;
+    --primary: 120 60% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 30% 95%;
+    --secondary-foreground: 120 100% 10%;
+    --muted: 120 30% 95%;
+    --muted-foreground: 120 20% 40%;
+    --accent: 120 30% 95%;
+    --accent-foreground: 120 100% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 120 30% 85%;
+    --input: 120 30% 85%;
+    --ring: 120 60% 50%;
+  }
+
+  .purple {
+    --background: 270 60% 97%;
+    --foreground: 270 100% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 100% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 100% 10%;
+    --primary: 270 60% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 30% 95%;
+    --secondary-foreground: 270 100% 10%;
+    --muted: 270 30% 95%;
+    --muted-foreground: 270 20% 40%;
+    --accent: 270 30% 95%;
+    --accent-foreground: 270 100% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 270 30% 85%;
+    --input: 270 30% 85%;
+    --ring: 270 60% 50%;
+  }
+
+  .orange {
+    --background: 30 100% 97%;
+    --foreground: 30 100% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 100% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 100% 10%;
+    --primary: 30 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 30% 95%;
+    --secondary-foreground: 30 100% 10%;
+    --muted: 30 30% 95%;
+    --muted-foreground: 30 20% 40%;
+    --accent: 30 30% 95%;
+    --accent-foreground: 30 100% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 30 30% 85%;
+    --input: 30 30% 85%;
+    --ring: 30 100% 50%;
+  }
+
+  .red {
+    --background: 0 60% 97%;
+    --foreground: 0 100% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 100% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 100% 10%;
+    --primary: 0 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 30% 95%;
+    --secondary-foreground: 0 100% 10%;
+    --muted: 0 30% 95%;
+    --muted-foreground: 0 20% 40%;
+    --accent: 0 30% 95%;
+    --accent-foreground: 0 100% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 30% 85%;
+    --input: 0 30% 85%;
+    --ring: 0 70% 50%;
+  }
+
+  .neutral {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 0% 20%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+}
+
+/* Background Patterns - Subtle and Professional */
+.bg-dots {
+  background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid {
+  background-image: linear-gradient(hsl(var(--muted-foreground) / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--muted-foreground) / 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-waves {
+  background-image: radial-gradient(circle at 50% 50%, hsl(var(--muted-foreground) / 0.04) 2px, transparent 2px);
+  background-size: 48px 48px;
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--background)) 0%,
+    hsl(var(--muted) / 0.3) 50%,
+    hsl(var(--background)) 100%
+  );
+}
+
+.bg-default {
+  background: hsl(var(--background));
+}
+
+/* Body background patterns - Even more subtle */
+body.bg-dots {
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+body.bg-grid {
+  background-color: hsl(var(--background));
+  background-image: linear-gradient(hsl(var(--muted-foreground) / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--muted-foreground) / 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+body.bg-waves {
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(circle at 50% 50%, hsl(var(--muted-foreground) / 0.02) 2px, transparent 2px);
+  background-size: 64px 64px;
+}
+
+body.bg-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--background)) 0%,
+    hsl(var(--muted) / 0.2) 50%,
+    hsl(var(--background)) 100%
+  );
+}
+
+body.bg-default {
+  background: hsl(var(--background));
+}
+
+/* Ensure proper font loading */
+.font-inter {
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), "Poppins", system-ui, sans-serif;
+}
+
+.font-roboto {
+  font-family: var(--font-roboto), "Roboto", system-ui, sans-serif;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+}
+
+.font-space-grotesk {
+  font-family: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--ring));
+  border-radius: calc(var(--radius) - 2px);
+}
+
+/* Text balance utility */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+}
